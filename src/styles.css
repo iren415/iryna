@@ -31,10 +31,7 @@ a {
 .site-header {
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto;
-  position: sticky;
-  top: 0;
   z-index: 20;
-  backdrop-filter: blur(18px);
 }
 
 main {

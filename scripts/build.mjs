@@ -3,7 +3,9 @@ import { execFileSync } from 'node:child_process';
 
 const file = 'index.html';
 const original = readFileSync(file, 'utf8');
-const buildHtml = original.replace('href="./src/styles.css"', 'href="/src/styles.css"');
+const buildHtml = original
+  .replace('href="./src/styles.css"', 'href="/src/styles.css"')
+  .replaceAll('src="./public/', 'src="./');
 
 try {
   writeFileSync(file, buildHtml);
